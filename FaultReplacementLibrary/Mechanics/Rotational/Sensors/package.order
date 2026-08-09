@@ -1,0 +1,5 @@
+FaultableAngleSensor
+FaultableSpeedSensor
+FaultableAccSensor
+FaultableTorqueSensor
+FaultablePowerSensor

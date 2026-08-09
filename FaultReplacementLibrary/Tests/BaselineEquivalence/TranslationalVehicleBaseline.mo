@@ -1,0 +1,17 @@
+within FaultReplacementLibrary.Tests.BaselineEquivalence;
+model TranslationalVehicleBaseline "MSL Vehicle and faultable annotation(Placement(transformation(extent={{70,30},{90,50}}))) Normal equivalence"
+  Modelica.Mechanics.Translational.Components.Vehicle original(m=1000,J=10,R=0.3,A=2,Cd=0.3) annotation(Placement(transformation(extent={{17,-50},{37,-30}})));
+  FaultReplacementLibrary.Mechanics.Translational.Components.FaultableVehicle faultable(m=1000,J=10,R=0.3,A=2,Cd=0.3,severity=0);
+  Modelica.Mechanics.Translational.Sources.Position driveOriginal(exact=true) annotation(Placement(transformation(extent={{-37,30},{-17,50}}))),driveFaultable(exact=true) annotation(Placement(transformation(extent={{-37,-50},{-17,-30}})));
+  Modelica.Blocks.Sources.Sine position(amplitude=0.1,f=1) annotation(Placement(transformation(extent={{-90,30},{-70,50}})));
+equation
+  connect(position.y,driveOriginal.s_ref)
+    annotation(Line(points={{-70,40},{-27,40}}, color={0,0,127})); connect(position.y,driveFaultable.s_ref)
+    annotation(Line(points={{-70,40},{-48,40},{-48,-40},{-27,-40}}, color={0,0,127})); connect(driveOriginal.flange,original.flangeT)
+    annotation(Line(points={{-27,40},{0,40},{0,-40},{27,-40}}, color={0,127,0})); connect(driveFaultable.flange,faultable.flangeT)
+    annotation(Line(points={{-27,-40},{26,-40},{26,40},{80,40}}, color={0,127,0}));
+  assert(noEvent(abs(original.flangeT.f-faultable.flangeT.f)<1e-4 and abs(original.flangeR.phi-faultable.flangeR.phi)<1e-7),"Vehicle Normal baseline mismatch");
+  annotation(
+    Documentation(info="<html><p>用法：直接仿真 TranslationalVehicleBaseline。该测试把名义 MSL 元件与 severity=0 的故障增强元件置于相同激励下，并以断言检查关键物理量的一致性；断言通过即表示 Normal 基线等价。</p></html>"),
+    experiment(StopTime=1,Tolerance=1e-8));
+end TranslationalVehicleBaseline;

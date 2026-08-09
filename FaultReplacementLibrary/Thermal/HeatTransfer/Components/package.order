@@ -1,0 +1,6 @@
+FaultableThermalConductor
+FaultableThermalResistor
+FaultableHeatCapacitor
+FaultableConvection
+FaultableBodyRadiation
+FaultableGeneralHeatFlowToTemperatureAdaptor

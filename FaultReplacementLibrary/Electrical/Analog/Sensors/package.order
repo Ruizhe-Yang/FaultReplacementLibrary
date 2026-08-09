@@ -1,0 +1,5 @@
+FaultableVoltageSensor
+FaultableCurrentSensor
+FaultablePotentialSensor
+FaultablePowerSensor
+FaultableMultiSensor

@@ -1,0 +1,8 @@
+FaultableConstantReluctance
+FaultableConstantPermeance
+FaultableVariableReluctance
+FaultableVariablePermeance
+FaultableEddyCurrent
+FaultableElectroMagneticConverter
+FaultableElectroMagneticConverterWithLeakageInductance
+FaultableLeakageWithCoefficient

@@ -1,0 +1,6 @@
+NPNFaultStage
+BaseReplaceable
+NPNGainLoss
+NPNLeakage
+NPNGainLossSeveritySweep
+NPNLeakageSeveritySweep

@@ -1,0 +1,7 @@
+BaseReplaceable
+DiodeLeakage
+DiodeForwardCharacteristicDegradation
+DiodeOpen
+DiodeLeakageSeveritySweep
+DiodeForwardCharacteristicDegradationSeveritySweep
+DiodeOpenSeveritySweep

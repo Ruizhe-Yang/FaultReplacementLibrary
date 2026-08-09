@@ -1,0 +1,5 @@
+BaseReplaceable
+BreakdownVoltageDrift
+ZenerLeakage
+BreakdownVoltageDriftSeveritySweep
+ZenerLeakageSeveritySweep
