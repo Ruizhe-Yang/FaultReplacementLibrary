@@ -37,7 +37,7 @@ Nominal / replaceable component:
 replaceable Modelica.Electrical.Analog.Basic.Capacitor C3(
   C=c3,
   v(start=0, fixed=true))
-  constrainedby Modelica.Electrical.Analog.Interfaces.OnePort;
+  constrainedby Modelica.Electrical.Analog.Basic.Capacitor;
 ```
 
 Fault scenario:
