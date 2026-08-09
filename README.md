@@ -361,36 +361,6 @@ Please keep the following in mind:
 
 ---
 
-## Version roadmap
-
-### v0.5.x — Release hardening
-- version and documentation consistency;
-- clearer nominal-equivalence wording;
-- third-party attribution cleanup;
-- regression-test cleanup.
-
-### v0.6 — Reproducibility
-- automated CI / regression testing;
-- machine-readable validation reports;
-- clearer fault-semantics documentation;
-- `CITATION.cff` and contribution guidelines.
-
-### v0.7 — Evidence
-- evidence level for representative fault equations;
-- parameter-source traceability;
-- improved severity semantics.
-
-### v0.8+ — System demonstrators
-- larger multi-domain demonstrators;
-- sensor / telemetry-oriented fault datasets;
-- FMEA and fault-diagnosis workflows;
-- cross-tool validation.
-
-### v1.0
-A stable public replacement interface, documented fault semantics, reproducible validation, and a frozen core API.
-
----
-
 ## License and upstream attribution
 
 This repository is distributed under the **GNU General Public License v3.0 (GPL-3.0)**; see [`LICENSE`](LICENSE).
